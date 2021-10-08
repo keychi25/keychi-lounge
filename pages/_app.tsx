@@ -1,12 +1,13 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import { ChakraProvider } from "@chakra-ui/react";
-
+import Navbar from "../component/Navbar";
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <Component {...pageProps}>
-      <ChakraProvider />
-    </Component>
+    <ChakraProvider>
+      <Navbar />
+      <Component {...pageProps} />
+    </ChakraProvider>
   );
 }
 export default MyApp;

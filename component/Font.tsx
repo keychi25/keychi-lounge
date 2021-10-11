@@ -3,7 +3,6 @@ import { Global } from "@emotion/react";
 const Fonts = () => (
   <Global
     styles={`
-
       /* latin-ext */
       @font-face {
         font-family: 'Open Sans';

@@ -3,7 +3,7 @@ import { Box, Container, Flex, Stack, Text } from "@chakra-ui/react";
 
 const SiteDescription = () => {
   return (
-    <Box w="100%" h="100vh" class="gradient-background">
+    <Box w="100%" h="100vh" className="gradient-background">
       <Container>
         <Flex
           flexDirection="column"

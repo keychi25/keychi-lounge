@@ -28,7 +28,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider theme={theme}>
       <Fonts />
-      <Navbar class="site-header" />
+      <Navbar className="site-header" />
       <Component {...pageProps} />
       <Divider />
       <Footer />

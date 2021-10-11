@@ -7,6 +7,7 @@ import { createBreakpoints } from "@chakra-ui/theme-tools";
 
 import Navbar from "../component/Navbar";
 import Footer from "../component/Footer";
+import Fonts from "../component/Font";
 
 const breakpoints = createBreakpoints({
   sm: "320px",
@@ -15,12 +16,19 @@ const breakpoints = createBreakpoints({
   xl: "1200px",
 });
 
-const theme = extendTheme({ breakpoints });
+const theme = extendTheme({
+  fonts: {
+    heading: "Open Sans",
+    body: "monospace",
+  },
+  breakpoints,
+});
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider theme={theme}>
-      <Navbar />
+      <Fonts />
+      <Navbar class="site-header" />
       <Component {...pageProps} />
       <Divider />
       <Footer />

@@ -16,7 +16,7 @@ import { Property } from "./card/Property";
 
 const Work = () => {
   return (
-    <Box w="100%" h="100vh">
+    <Box w="100%" h="100vh" class="dot-background">
       <Container>
         <Flex
           flexDirection="column"

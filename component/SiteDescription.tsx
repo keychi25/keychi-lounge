@@ -3,7 +3,7 @@ import { Box, Container, Flex, Stack, Text } from "@chakra-ui/react";
 
 const SiteDescription = () => {
   return (
-    <Box bg="#81cac4" w="100%" h="100vh">
+    <Box w="100%" h="100vh" class="gradient-background">
       <Container>
         <Flex
           flexDirection="column"
@@ -18,7 +18,11 @@ const SiteDescription = () => {
             justifyContent="center"
             alignItems="center"
           >
-            <Box minW={{ base: "100%", md: "768px" }} align="center">
+            <Box
+              minW={{ base: "100%", md: "768px" }}
+              align="center"
+              color="white"
+            >
               <Text fontSize="6xl">Keychi&apos;s Lounge</Text>
               <Text fontSize="lg">
                 このサイトはエンジニアkeychiのポートフォリオサイトです。

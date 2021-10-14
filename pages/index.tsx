@@ -3,14 +3,25 @@ import type { NextPage } from "next";
 import SiteDescription from "../component/SiteDescription";
 import MyProfile from "../component/MyProfile";
 import Work from "../component/Work";
+import Blogs from "../component/Blogs";
+
 const Home: NextPage = () => {
   return (
     <>
-      <SiteDescription />
+      <div id="site-description">
+        <SiteDescription />
+      </div>
       <Divider />
-      <MyProfile />
+      <div id="my-profile">
+        <MyProfile />
+      </div>
       <Divider />
-      <Work />
+      <div id="work">
+        <Work />
+      </div>
+      <div id="blog">
+        <Blogs />
+      </div>
     </>
   );
 };

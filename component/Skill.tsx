@@ -7,7 +7,7 @@ import {
   SimpleGrid,
   Text,
 } from "@chakra-ui/react";
-import RadertBar from "./graph/RadertBar";
+import RadertChart from "./graph/RadertChart";
 
 const Skill = () => {
   const frontendData = {
@@ -35,12 +35,25 @@ const Skill = () => {
     label: "BackEnd Skill",
     data: [2, 2, 3, 2.5, 4, 3],
     fill: true,
-    backgroundColor: "rgba(54, 162, 235, 0.2)",
-    borderColor: "rgb(54, 162, 235)",
-    pointBackgroundColor: "rgb(54, 162, 235)",
+    backgroundColor: "rgba(255, 99, 132, 0.2)",
+    borderColor: "rgb(255, 99, 132)",
+    pointBackgroundColor: "rgb(255, 99, 132)",
     pointBorderColor: "#fff",
     pointHoverBackgroundColor: "#fff",
-    pointHoverBorderColor: "rgb(54, 162, 235)",
+    pointHoverBorderColor: "rgb(255, 99, 132)",
+  };
+
+  const serverData = {
+    labels: ["AWS", "GCP", "Linux", "Docker"],
+    label: "DevOps Skill",
+    data: [2, 2, 3, 5],
+    fill: true,
+    backgroundColor: "rgba(75, 192, 192, 0.2)",
+    borderColor: "rgba(75, 192, 192)",
+    pointBackgroundColor: "rgba(75, 192, 192)",
+    pointBorderColor: "#fff",
+    pointHoverBackgroundColor: "#fff",
+    pointHoverBorderColor: "rgba(75, 192, 192)",
   };
 
   return (
@@ -64,9 +77,10 @@ const Skill = () => {
               align="center"
             >
               <Text fontSize="6xl">Skill</Text>
-              <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
-                <RadertBar {...frontendData} />
-                <RadertBar {...backendData} />
+              <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
+                <RadertChart {...frontendData} />
+                <RadertChart {...backendData} />
+                <RadertChart {...serverData} />
               </SimpleGrid>
             </Box>
           </Stack>

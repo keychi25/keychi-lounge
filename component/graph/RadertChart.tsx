@@ -13,7 +13,7 @@ interface dataset {
   pointHoverBorderColor: string;
 }
 
-const RadertBar = (props: dataset) => {
+const RadertChart = (props: dataset) => {
   console.log(props.label);
   const data = {
     labels: props.labels,
@@ -48,7 +48,7 @@ const RadertBar = (props: dataset) => {
     },
   };
 
-  return <Radar data={data} width={500} height={1000} options={options} />;
+  return <Radar data={data} width={500} height={500} options={options} />;
 };
 
-export default RadertBar;
+export default RadertChart;

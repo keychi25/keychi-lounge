@@ -5,8 +5,9 @@ import { LinkGrid } from "./footer/LinkGrid";
 import { Logo } from "./footer/Logo";
 import { SocialMediaLinks } from "./footer/SocialMediaLinks";
 import { FormRequest } from "./footer/FormRequest";
+import { Props } from "framer-motion/types/types";
 
-const Footer = () => (
+const Footer = (props: Props) => (
   <Box
     as="footer"
     role="contentinfo"
@@ -14,6 +15,7 @@ const Footer = () => (
     maxW="7xl"
     py="12"
     px={{ base: "4", md: "8" }}
+    {...props}
   >
     <Stack spacing="10" divider={<StackDivider />}>
       <Stack

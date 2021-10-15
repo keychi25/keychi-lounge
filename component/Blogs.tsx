@@ -35,7 +35,7 @@ const Blogs = () => {
               minW={{ base: "100%", md: "1000px", xl: "1440px" }}
               align="center"
             >
-              <Text fontSize="6xl">Blog</Text>
+              <Text fontSize="6xl">blogs</Text>
               <SimpleGrid columns={{ base: 1, md: 1, xl: 1 }} spacing={10}>
                 <Box
                   as="section"

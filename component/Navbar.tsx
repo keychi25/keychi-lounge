@@ -28,6 +28,10 @@ const NAV_ITEMS: Array<NavItem> = [
     id: "blog",
     label: "Blogs",
   },
+  {
+    id: "skill",
+    label: "My Skills",
+  },
 ];
 
 const scroll = function (idStr: string) {

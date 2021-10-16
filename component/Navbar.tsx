@@ -36,7 +36,7 @@ const NAV_ITEMS: Array<NavItem> = [
 
 const scroll = function (idStr: string) {
   const thisPageY = window.pageYOffset;
-  const toPageY = document.getElementById(idStr).getBoundingClientRect().top;
+  const toPageY = document.getElementById(idStr)!.getBoundingClientRect().top;
   if (toPageY == 0) {
     // 何もしない
   } else if (thisPageY !== 0) {

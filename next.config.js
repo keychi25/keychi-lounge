@@ -6,4 +6,5 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 module.exports = withBundleAnalyzer({
   // 他の設定
   reactStrictMode: true,
+  trailingSlash: true,
 });

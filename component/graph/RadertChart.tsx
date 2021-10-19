@@ -14,7 +14,6 @@ interface dataset {
 }
 
 const RadertChart = (props: dataset) => {
-  console.log(props.label);
   const data = {
     labels: props.labels,
     datasets: [

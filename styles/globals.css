@@ -14,6 +14,13 @@ body {
   width: 100%;
 }
 
+.site-footer {
+  background: #fff;
+  display: flex;
+  padding: 20px 30px;
+  width: 100%;
+}
+
 .gradient-background {
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;

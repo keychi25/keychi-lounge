@@ -21,7 +21,7 @@ const Home: NextPage = () => {
         <Work />
       </div>
       <Divider />
-      <div id="blogs">
+      <div id="blog">
         <Blogs />
       </div>
       <Divider />

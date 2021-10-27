@@ -36,6 +36,9 @@ const Blogs = () => {
               align="center"
             >
               <Text fontSize="6xl">blogs</Text>
+              <Text fontSize="lg">
+                メモ書きのようにブログを書き留めていきます。
+              </Text>
               <SimpleGrid columns={{ base: 1, md: 1, xl: 1 }} spacing={10}>
                 <Box
                   as="section"

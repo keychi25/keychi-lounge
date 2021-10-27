@@ -36,6 +36,7 @@ const Work = () => {
               align="center"
             >
               <Text fontSize="6xl">Works</Text>
+              <Text fontSize="lg">今まで作ってきたものたち</Text>
               <SimpleGrid columns={{ base: 1, md: 2, xl: 3 }} spacing={10}>
                 <Box
                   as="section"

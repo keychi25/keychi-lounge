@@ -50,7 +50,7 @@ const RadertChart = (props: dataset) => {
     },
   };
 
-  return <Radar data={data} width={500} height={500} options={options} />;
+  return <Radar data={data} width={300} height={300} options={options} />;
 };
 
 export default RadertChart;

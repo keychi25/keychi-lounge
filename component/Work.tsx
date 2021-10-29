@@ -32,11 +32,11 @@ const Work = () => {
             alignItems="center"
           >
             <Box
-              minW={{ base: "100%", md: "1000px", xl: "1440px" }}
+              minW={{ base: "100%", md: "720px", xl: "1140px" }}
               align="center"
             >
               <Text fontSize="6xl">Works</Text>
-              <Text fontSize="lg">今まで作ってきたものたち</Text>
+              <Text fontSize="lg">今まで作ってきたものたち（準備中）</Text>
               <SimpleGrid columns={{ base: 1, md: 2, xl: 3 }} spacing={10}>
                 <Box
                   as="section"
@@ -44,10 +44,10 @@ const Work = () => {
                   py="12"
                   px={{ md: "8" }}
                 >
-                  <Card maxW="3xl" mx="auto">
-                    <CardHeader title="Account Info" />
+                  <Card maxW="xl" mx="auto">
+                    <CardHeader title="タイトル" />
                     <CardContent>
-                      <Property label="Name" value="Chakra UI" />
+                      <Property label="ラベル" value="説明" />
                     </CardContent>
                   </Card>
                 </Box>
@@ -57,10 +57,10 @@ const Work = () => {
                   py="12"
                   px={{ md: "8" }}
                 >
-                  <Card maxW="3xl" mx="auto">
-                    <CardHeader title="Account Info" />
+                  <Card maxW="xl" mx="auto">
+                    <CardHeader title="タイトル" />
                     <CardContent>
-                      <Property label="Name" value="Chakra UI" />
+                      <Property label="ラベル" value="説明" />
                     </CardContent>
                   </Card>
                 </Box>
@@ -70,10 +70,10 @@ const Work = () => {
                   py="12"
                   px={{ md: "8" }}
                 >
-                  <Card maxW="3xl" mx="auto">
-                    <CardHeader title="Account Info" />
+                  <Card maxW="xl" mx="auto">
+                    <CardHeader title="タイトル" />
                     <CardContent>
-                      <Property label="Name" value="Chakra UI" />
+                      <Property label="ラベル" value="説明" />
                     </CardContent>
                   </Card>
                 </Box>

@@ -74,7 +74,7 @@ const Skill = () => {
             alignItems="center"
           >
             <Box
-              minW={{ base: "100%", md: "1000px", xl: "1440px" }}
+              minW={{ base: "100%", md: "720px", xl: "1140px" }}
               align="center"
             >
               <Text fontSize="6xl">Skill</Text>
@@ -85,15 +85,15 @@ const Skill = () => {
                 <br />
                 取得している資格の表ものせておきます。
               </Text>
-              <Text fontSize="4xl">スキルレーダーチャート</Text>
+              <Text fontSize="xl">スキルレーダーチャート</Text>
               <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
                 <RadertChart {...frontendData} />
                 <RadertChart {...backendData} />
                 <RadertChart {...serverData} />
               </SimpleGrid>
+              <Text fontSize="xl">取得資格表</Text>
+              <SkillTable />
             </Box>
-            <Text fontSize="4xl">取得資格表</Text>
-            <SkillTable />
           </Stack>
         </Flex>
       </Container>

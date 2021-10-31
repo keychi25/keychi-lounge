@@ -8,7 +8,62 @@ import {
   Text,
 } from "@chakra-ui/react";
 import RadertChart from "./graph/RadertChart";
+import { Column } from "react-table";
 import SkillTable from "./SkillTable";
+
+type UnitConversion = {
+  name: string;
+  datetime: string;
+  comment: string;
+};
+
+const data: UnitConversion[] = [
+  {
+    name: "基本情報技術者試験",
+    datetime: "2017/4（学部2年）",
+    comment: "/",
+  },
+  {
+    name: "Ruby Association Certified Ruby Programmer Silver version 2.1",
+    datetime: "2021/5（修士2年）",
+    comment: "業務で使うらしいから勉強した。",
+  },
+  {
+    name: "Ruby Association Certified Ruby Programmer Gold version 2.1",
+    datetime: "2021/10（修士2年）",
+    comment: "業務で使うらしいから勉強した。",
+  },
+  {
+    name: "AWS Certified Solutions Architect - Associate（SAA-C02）",
+    datetime: "metres (m)",
+    comment: "業務で使うらしいから勉強した。（ 二日酔いで受験して辛かった）",
+  },
+  {
+    name: "高等学校教諭一種免許状（情報）",
+    datetime: "2022/3（修士2年終了時）",
+    comment: "/",
+  },
+  {
+    name: "高等学校教諭一種免許状（数学）",
+    datetime: "2022/3（修士2年終了時）",
+    comment: "/",
+  },
+];
+
+const columns: Column<UnitConversion>[] = [
+  {
+    Header: "取得資格",
+    accessor: "name",
+  },
+  {
+    Header: "取得日時",
+    accessor: "datetime",
+  },
+  {
+    Header: "備考/感想",
+    accessor: "comment",
+  },
+];
 
 const Skill = () => {
   const frontendData = {
@@ -92,7 +147,7 @@ const Skill = () => {
                 <RadertChart {...serverData} />
               </SimpleGrid>
               <Text fontSize="xl">取得資格表</Text>
-              <SkillTable />
+              <SkillTable columns={columns} data={data} />
             </Box>
           </Stack>
         </Flex>

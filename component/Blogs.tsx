@@ -32,10 +32,13 @@ const Blogs = () => {
             alignItems="center"
           >
             <Box
-              minW={{ base: "100%", md: "1000px", xl: "1440px" }}
+              minW={{ base: "100%", md: "720px", xl: "1140px" }}
               align="center"
             >
               <Text fontSize="6xl">blogs</Text>
+              <Text fontSize="lg">
+                メモ書きのようにブログを書き留めていきます（準備中）。
+              </Text>
               <SimpleGrid columns={{ base: 1, md: 1, xl: 1 }} spacing={10}>
                 <Box
                   as="section"
@@ -43,10 +46,10 @@ const Blogs = () => {
                   py="12"
                   px={{ md: "8" }}
                 >
-                  <Card maxW="3xl" mx="auto">
-                    <CardHeader title="Account Info" />
+                  <Card maxW="xl" mx="auto">
+                    <CardHeader title="タイトル" />
                     <CardContent>
-                      <Property label="Name" value="Chakra UI" />
+                      <Property label="ラベル" value="内容" />
                     </CardContent>
                   </Card>
                 </Box>
@@ -56,10 +59,10 @@ const Blogs = () => {
                   py="12"
                   px={{ md: "8" }}
                 >
-                  <Card maxW="3xl" mx="auto">
-                    <CardHeader title="Account Info" />
+                  <Card maxW="xl" mx="auto">
+                    <CardHeader title="タイトル" />
                     <CardContent>
-                      <Property label="Name" value="Chakra UI" />
+                      <Property label="ラベル" value="内容" />
                     </CardContent>
                   </Card>
                 </Box>

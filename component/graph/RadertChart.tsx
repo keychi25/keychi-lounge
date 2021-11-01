@@ -36,18 +36,21 @@ const RadertChart = (props: dataset) => {
     responsive: false,
     elements: {
       line: {
-        borderWidth: 3,
+        borderWidth: 4,
       },
     },
     scales: {
       r: {
-        suggestedMin: 0,
-        suggestedMax: 5,
+        min: 0,
+        max: 5,
+        ticks: {
+          stepSize: 1,
+        },
       },
     },
   };
 
-  return <Radar data={data} width={500} height={500} options={options} />;
+  return <Radar data={data} width={300} height={300} options={options} />;
 };
 
 export default RadertChart;

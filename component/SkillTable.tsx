@@ -12,24 +12,8 @@ export default function SkillTable<Data extends object>({
   data,
   columns,
 }: DataTableProps<Data>) {
-  const {
-    getTableProps,
-    getTableBodyProps,
-    headerGroups,
-    rows,
-    prepareRow,
-    pageOptions,
-    pageCount,
-    gotoPage,
-    nextPage,
-    previousPage,
-    setPageSize,
-    state: { pageIndex, pageSize },
-  } = useTable(
-    { columns, data, initialState: { pageIndex: 1, pageSize: 5 } },
-    useSortBy,
-    usePagination
-  );
+  const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
+    useTable({ columns, data }, useSortBy, usePagination);
 
   return (
     <>

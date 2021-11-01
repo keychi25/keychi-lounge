@@ -18,7 +18,6 @@ export default function SkillTable<Data extends object>({
     headerGroups,
     rows,
     prepareRow,
-    page,
     pageOptions,
     pageCount,
     gotoPage,
@@ -34,7 +33,7 @@ export default function SkillTable<Data extends object>({
 
   return (
     <>
-      <Table {...getTableProps()}>
+      <Table {...getTableProps()} size="sm">
         <Thead>
           {headerGroups.map((headerGroup: any) => (
             <Tr
@@ -81,56 +80,6 @@ export default function SkillTable<Data extends object>({
           })}
         </Tbody>
       </Table>
-      <ul className="pagination">
-        <li className="page-item" onClick={() => gotoPage(0)}>
-          <a className="page-link">First</a>
-        </li>
-        <li className="page-item" onClick={() => previousPage()}>
-          <a className="page-link">{"<"}</a>
-        </li>
-        <li className="page-item" onClick={() => nextPage()}>
-          <a className="page-link">{">"}</a>
-        </li>
-        <li className="page-item" onClick={() => gotoPage(pageCount - 1)}>
-          <a className="page-link">Last</a>
-        </li>
-        <li>
-          <a className="page-link">
-            Page{" "}
-            <strong>
-              {pageIndex + 1} of {pageOptions.length}
-            </strong>{" "}
-          </a>
-        </li>
-        <li>
-          <a className="page-link">
-            <input
-              className="form-control"
-              type="number"
-              defaultValue={pageIndex + 1}
-              onChange={(e) => {
-                const page = e.target.value ? Number(e.target.value) - 1 : 0;
-                gotoPage(page);
-              }}
-              style={{ width: "100px", height: "20px" }}
-            />
-          </a>
-        </li>{" "}
-        <select
-          className="form-control"
-          value={pageSize}
-          onChange={(e) => {
-            setPageSize(Number(e.target.value));
-          }}
-          style={{ width: "120px", height: "38px" }}
-        >
-          {[5, 10, 20, 30, 40, 50].map((pageSize) => (
-            <option key={pageSize} value={pageSize}>
-              Show {pageSize}
-            </option>
-          ))}
-        </select>
-      </ul>
     </>
   );
 }

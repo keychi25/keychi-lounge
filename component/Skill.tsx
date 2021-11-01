@@ -30,12 +30,12 @@ const data: UnitConversion[] = [
   },
   {
     name: "Ruby Association Certified Ruby Programmer Gold version 2.1",
-    datetime: "2021/10（修士2年）",
+    datetime: "2021/6（修士2年）",
     comment: "業務で使うらしいから勉強した。",
   },
   {
     name: "AWS Certified Solutions Architect - Associate（SAA-C02）",
-    datetime: "metres (m)",
+    datetime: "2021/10（修士2年）",
     comment: "業務で使うらしいから勉強した。（ 二日酔いで受験して辛かった）",
   },
   {

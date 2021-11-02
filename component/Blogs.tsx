@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import {
   Box,
   Container,
@@ -8,13 +9,21 @@ import {
   SimpleGrid,
   useColorModeValue,
 } from "@chakra-ui/react";
-
 import { Card } from "./card/Card";
-import { CardContent } from "./card/CardContent";
 import { CardHeader } from "./card/CardHeader";
+import { CardContent } from "./card/CardContent";
 import { Property } from "./card/Property";
 
-const Blogs = () => {
+export default function Blogs({
+  allPostsData,
+}: {
+  allPostsData: {
+    date: string;
+    title: string;
+    id: string;
+    tags: Array<string>;
+  }[];
+}) {
   return (
     <Box w="100%" h="100vh" className="dot-background">
       <Container>
@@ -39,33 +48,31 @@ const Blogs = () => {
               <Text fontSize="lg">
                 メモ書きのようにブログを書き留めていきます（準備中）。
               </Text>
-              <SimpleGrid columns={{ base: 1, md: 1, xl: 1 }} spacing={10}>
-                <Box
-                  as="section"
-                  bg={useColorModeValue("gray.100", "inherit")}
-                  py="12"
-                  px={{ md: "8" }}
-                >
-                  <Card maxW="xl" mx="auto">
-                    <CardHeader title="タイトル" />
-                    <CardContent>
-                      <Property label="ラベル" value="内容" />
-                    </CardContent>
-                  </Card>
-                </Box>
-                <Box
-                  as="section"
-                  bg={useColorModeValue("gray.100", "inherit")}
-                  py="12"
-                  px={{ md: "8" }}
-                >
-                  <Card maxW="xl" mx="auto">
-                    <CardHeader title="タイトル" />
-                    <CardContent>
-                      <Property label="ラベル" value="内容" />
-                    </CardContent>
-                  </Card>
-                </Box>
+              <SimpleGrid columns={{ base: 1, md: 1, xl: 2 }} spacing={10}>
+                {allPostsData.map((cardBlog: any) => (
+                  <Box
+                    key={cardBlog.id}
+                    as="section"
+                    bg={useColorModeValue("gray.100", "inherit")}
+                    py="12"
+                    px={{ md: "8" }}
+                  >
+                    <Card maxW="xl" mx="auto">
+                      <CardHeader
+                        title={cardBlog.title}
+                        action={
+                          <Link href={`/blog/${cardBlog.id}`}>こちら</Link>
+                        }
+                      />
+                      <CardContent>
+                        <Property
+                          label={`作成日：${cardBlog.date}`}
+                          value={`カテゴリ：${cardBlog.tags}`}
+                        />
+                      </CardContent>
+                    </Card>
+                  </Box>
+                ))}
               </SimpleGrid>
             </Box>
           </Stack>
@@ -73,6 +80,4 @@ const Blogs = () => {
       </Container>
     </Box>
   );
-};
-
-export default Blogs;
+}

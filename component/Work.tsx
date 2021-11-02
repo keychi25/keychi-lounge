@@ -10,8 +10,8 @@ import {
 } from "@chakra-ui/react";
 
 import { Card } from "./card/Card";
-import { CardContent } from "./card/CardContent";
 import { CardHeader } from "./card/CardHeader";
+import { CardContent } from "./card/CardContent";
 import { Property } from "./card/Property";
 
 const Work = () => {

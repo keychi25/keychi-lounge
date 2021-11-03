@@ -1,4 +1,4 @@
-import { Container, Text } from "@chakra-ui/react";
+import { Box, Container, Heading, Stack, Text } from "@chakra-ui/react";
 import { getAllPostIds, getPostData } from "../../lib/posts";
 import Date from "../../component/date";
 import { GetStaticProps, GetStaticPaths } from "next";
@@ -33,21 +33,30 @@ export default function Post({
     hljs.highlightAll();
   });
   return (
-    <>
-      <Container>
-        <Text fontSize="xl">{postData.title}</Text>
-        <div>
-          <Date dateString={postData.date} />
-        </div>
-        <code>
-          <span
-            dangerouslySetInnerHTML={{
-              __html: marked(postData.contentHtml),
-            }}
-          />
-        </code>
-      </Container>
-    </>
+    <Container maxW={"6xl"}>
+      <Stack
+        as={Box}
+        textAlign={"center"}
+        spacing={{ base: 8, md: 14 }}
+        py={{ base: 20, md: 36 }}
+      >
+        <Heading
+          fontWeight={600}
+          fontSize={{ base: "2xl", sm: "4xl", md: "6xl" }}
+          lineHeight={"110%"}
+        >
+          {postData.title}
+          <Text fontSize="xl">
+            <Date dateString={postData.date} />
+          </Text>
+        </Heading>
+      </Stack>
+      <span
+        dangerouslySetInnerHTML={{
+          __html: marked(postData.contentHtml),
+        }}
+      />
+    </Container>
   );
 }
 

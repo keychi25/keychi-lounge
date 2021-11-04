@@ -1,5 +1,4 @@
 import "../styles/globals.css";
-import { Divider } from "@chakra-ui/layout";
 import type { AppProps } from "next/app";
 import { ChakraProvider } from "@chakra-ui/react";
 import { extendTheme } from "@chakra-ui/react";
@@ -24,11 +23,13 @@ const theme = extendTheme({
 });
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const description = "keychiのポートフォリオ";
   return (
     <ChakraProvider theme={theme}>
       <Head>
         <title>Keychi&apos;s Lounge</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="description" content={description} />
       </Head>
       <Fonts />
       <Component {...pageProps} />

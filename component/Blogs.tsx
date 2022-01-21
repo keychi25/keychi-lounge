@@ -24,6 +24,7 @@ export default function Blogs({
     tags: Array<string>;
   }[];
 }) {
+  const bgColor = useColorModeValue("gray.100", "inherit");
   return (
     <Box w="100%" h="100vh" className="dot-background">
       <Container>
@@ -53,7 +54,7 @@ export default function Blogs({
                   <Box
                     key={cardBlog.id}
                     as="section"
-                    bg={useColorModeValue("gray.100", "inherit")}
+                    bg={bgColor}
                     py="12"
                     px={{ md: "8" }}
                   >

@@ -39,6 +39,11 @@ const data: UnitConversion[] = [
     comment: "業務で使うらしいから勉強した。（ 二日酔いで受験して辛かった）",
   },
   {
+    name: "AWS Certified Solutions Architect - Professional（SAP-C01）",
+    datetime: "2022/3（修士2年）",
+    comment: "業務で使うらしいから勉強した。",
+  },
+  {
     name: "高等学校教諭一種免許状（情報）",
     datetime: "2022/3（修士2年終了時）",
     comment: "/",
@@ -88,7 +93,7 @@ const Skill = () => {
 
   const backendData = {
     labels: ["Ruby", "Python", "Java", "Mysql", "PostgreSQL", "mongoDB"],
-    label: "BackEnd Skill",
+    label: "Back End Skill",
     data: [3, 3, 3, 2.5, 1, 2.5],
     fill: true,
     backgroundColor: "rgba(255, 99, 132, 0.2)",
@@ -102,7 +107,7 @@ const Skill = () => {
   const serverData = {
     labels: ["AWS", "GCP", "Linux", "Docker"],
     label: "DevOps Skill",
-    data: [2, 1, 2, 3],
+    data: [3, 1, 2, 3],
     fill: true,
     backgroundColor: "rgba(75, 192, 192, 0.2)",
     borderColor: "rgba(75, 192, 192)",

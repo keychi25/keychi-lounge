@@ -1,4 +1,4 @@
-import { Box, Stack, StackDivider } from "@chakra-ui/react";
+import { Box, Stack } from "@chakra-ui/react";
 import * as React from "react";
 import { Copyright } from "./footer/Copyright";
 import { LinkGrid } from "./footer/LinkGrid";
@@ -17,7 +17,7 @@ const Footer = (props: Props) => (
     px={{ base: "4", md: "8" }}
     {...props}
   >
-    <Stack spacing="10" divider={<StackDivider />}>
+    <Stack spacing="10">
       <Stack
         direction={{ base: "column", lg: "row" }}
         spacing={{ base: "10", lg: "28" }}

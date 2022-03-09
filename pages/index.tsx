@@ -41,6 +41,7 @@ export default function Home({
       <div id="skill">
         <Skill />
       </div>
+      <Divider />
       <Footer className="site-footer" />
     </>
   );

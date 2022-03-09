@@ -44,12 +44,7 @@ const data: UnitConversion[] = [
     comment: "業務で使うらしいから勉強した。",
   },
   {
-    name: "高等学校教諭一種免許状（情報）",
-    datetime: "2022/3（修士2年終了時）",
-    comment: "/",
-  },
-  {
-    name: "高等学校教諭一種免許状（数学）",
+    name: "高等学校教諭一種免許状（情報 / 情報）",
     datetime: "2022/3（修士2年終了時）",
     comment: "/",
   },
@@ -80,7 +75,7 @@ const Skill = () => {
       "Nuxt（Vue）",
       "Next（Reacct）",
     ],
-    label: "FrontEnd Skill",
+    label: "Front End Skill",
     data: [2, 2, 3, 2.5, 3, 2],
     fill: true,
     backgroundColor: "rgba(54, 162, 235, 0.2)",
@@ -118,12 +113,12 @@ const Skill = () => {
   };
 
   return (
-    <Box w="100%" h="100vh">
+    <Box w="100%" h="150vh">
       <Container>
         <Flex
           flexDirection="column"
           width="100wh"
-          height="100vh"
+          height="150vh"
           justifyContent="center"
           alignItems="center"
         >
